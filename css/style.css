@@ -69,12 +69,6 @@ a:hover{
     padding:50px;
 }
 
-/* Overlay */
-
-.overlay{
-    display:none;
-}
-
 /* ==========================
    MOBILE DRAWER MENU
 ========================== */
@@ -125,31 +119,6 @@ a:hover{
     .sidebar.active{
         display:block;
     }
-}
-
-.close-btn{
-    display:none;
-}
-
-@media (max-width:900px){
-
-    .close-btn{
-        display:block;
-        float:right;
-
-        border:none;
-        background:none;
-
-        font-size:24px;
-        cursor:pointer;
-        margin-bottom:15px;
-    }
-}
-
-.main-content{
-    margin-left:320px;
-    padding:50px;
-    flex:1;
 }
 
 /* ==========================
