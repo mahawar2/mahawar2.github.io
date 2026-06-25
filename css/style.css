@@ -49,6 +49,10 @@ a:hover{
     flex:1;
 }
 
+.menu-toggle{
+    display:none;
+}
+
 .close-btn{
     display:none;
 }
