@@ -12,6 +12,8 @@
 
 <button class="menu-toggle" onclick="toggleSidebar()">☰ Menu</button>
 
+<div id="overlay" class="overlay" onclick="closeSidebar()"></div>
+
 <div class="container">
 
     <aside class="sidebar">
@@ -93,10 +95,26 @@
 
 <script>
 
-function toggleSidebar() {
+function toggleSidebar(){
+
     document
         .querySelector('.sidebar')
         .classList.toggle('active');
+
+    document
+        .getElementById('overlay')
+        .classList.toggle('active');
+}
+
+function closeSidebar(){
+
+    document
+        .querySelector('.sidebar')
+        .classList.remove('active');
+
+    document
+        .getElementById('overlay')
+        .classList.remove('active');
 }
 
 </script>
