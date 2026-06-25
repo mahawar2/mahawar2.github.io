@@ -83,7 +83,7 @@ a:hover{
 
     /* Main content should always use full width */
     .main-content{
-        margin-left:0 !important;
+        margin-left:0;
         width:100%;
         padding:70px 25px 25px 25px;
     }
