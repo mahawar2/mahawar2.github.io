@@ -106,46 +106,23 @@ a:hover{
         cursor:pointer;
     }
 
-    /* Sidebar completely outside screen */
+    .container{
+        display:block;
+    }
+
+    /* Hidden by default */
     .sidebar{
-        position:relative;
-        top:0;
-        left:-320px; /* hidden */
-
-        width:320px;
-        height:100vh;
-
-        background:white;
-        z-index:1900;
-
-        overflow-y:auto;
-
-        transition:left 0.3s ease;
-        box-shadow:2px 0 15px rgba(0,0,0,0.15);
-    }
-
-    /* Open state */
-    .sidebar.active{
-        left:0;
-    }
-
-    /* Dark overlay */
-    .overlay{
         display:none;
-
-        position:fixed;
-        top:0;
-        left:0;
-
         width:100%;
-        height:100%;
-
-        background:rgba(0,0,0,0.4);
-
-        z-index:1800;
+        height:auto;
+        position:relative;
+        border-right:none;
+        border-bottom:1px solid #ddd;
+        margin:0;
     }
 
-    .overlay.active{
+    /* Shown when button clicked */
+    .sidebar.active{
         display:block;
     }
 }
