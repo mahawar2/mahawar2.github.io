@@ -91,6 +91,7 @@ a:hover{
         margin:0;
         top:0;
         left:0;
+        z-index: 10;
     }
 
     /* Shown when button clicked */
