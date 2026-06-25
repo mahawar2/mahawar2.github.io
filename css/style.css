@@ -148,11 +148,6 @@ a:hover{
     .overlay.active{
         display:block;
     }
-   
-    .main-content{
-        margin-left:0;
-        padding-top:70px;
-    }
 }
 
 .close-btn{
