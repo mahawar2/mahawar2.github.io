@@ -56,12 +56,17 @@ a:hover{
 
 .sidebar{
     width:320px;
-    background:#ffffff;
+    background:white;
     border-right:1px solid #e5e5e5;
     padding:30px 25px;
     position:fixed;
     height:100vh;
     overflow-y:auto;
+}
+
+.main-content{
+    margin-left:320px;
+    padding:50px;
 }
 
 /* Overlay */
@@ -71,51 +76,79 @@ a:hover{
 }
 
 /* ==========================
-   MOBILE SIDEBAR
+   MOBILE DRAWER MENU
 ========================== */
 
 @media (max-width:900px){
 
-    .menu-toggle{
-        display:block;
+    /* Main content should always use full width */
+    .main-content{
+        margin-left:0 !important;
+        width:100%;
+        padding:70px 25px 25px 25px;
     }
 
+    /* Hamburger button */
+    .menu-toggle{
+        display:block;
+        position:fixed;
+        top:15px;
+        left:15px;
+        z-index:2000;
+
+        background:#1b365d;
+        color:white;
+        border:none;
+        border-radius:6px;
+
+        padding:10px 14px;
+        font-size:22px;
+        cursor:pointer;
+    }
+
+    /* Sidebar completely outside screen */
     .sidebar{
         position:fixed;
         top:0;
-        left:340px;
+        left:-320px; /* hidden */
+
         width:320px;
         height:100vh;
 
-        z-index:1500;
-
         background:white;
+        z-index:1900;
+
         overflow-y:auto;
 
         transition:left 0.3s ease;
-        border-right:1px solid #ddd;
+        box-shadow:2px 0 15px rgba(0,0,0,0.15);
     }
 
+    /* Open state */
     .sidebar.active{
         left:0;
     }
 
+    /* Dark overlay */
     .overlay{
+        display:none;
+
         position:fixed;
         top:0;
         left:0;
+
         width:100%;
         height:100%;
 
         background:rgba(0,0,0,0.4);
 
-        z-index:1400;
+        z-index:1800;
     }
 
     .overlay.active{
         display:block;
     }
-
+   
     .main-content{
         margin-left:0;
         padding-top:70px;
