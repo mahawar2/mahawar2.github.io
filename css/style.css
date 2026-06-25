@@ -75,52 +75,73 @@ a:hover{
 
 @media (max-width:900px){
 
-    /* Main content should always use full width */
+    .container{
+        display:block;
+    }
+
     .main-content{
         margin-left:0;
         width:100%;
-        padding:70px 25px 25px 25px;
+        padding:20px;
     }
 
-    /* Hamburger button */
     .menu-toggle{
         display:block;
         position:fixed;
         top:15px;
         left:15px;
-        z-index:2000;
+        z-index:2001;
 
         background:#1b365d;
         color:white;
         border:none;
         border-radius:6px;
-
         padding:10px 14px;
-        font-size:22px;
         cursor:pointer;
-    }
-
-    .container{
-        display:block;
     }
 
     /* Hidden by default */
     .sidebar{
         display:none;
-        width:100%;
-        height:auto;
-        position:relative;
-        border-right:none;
-        border-bottom:1px solid #ddd;
-        margin:0;
+
+        position:fixed;
+        top:0;
+        left:0;
+
+        width:320px;
+        max-width:85vw;
+        height:100vh;
+
+        overflow-y:auto;
+
+        background:white;
+        z-index:2000;
+
+        box-shadow:0 0 20px rgba(0,0,0,0.25);
     }
 
-    /* Shown when button clicked */
     .sidebar.active{
         display:block;
     }
-}
 
+    .overlay{
+        display:none;
+
+        position:fixed;
+        top:0;
+        left:0;
+
+        width:100%;
+        height:100%;
+
+        background:rgba(0,0,0,0.4);
+        z-index:1999;
+    }
+
+    .overlay.active{
+        display:block;
+    }
+}
 /* ==========================
    PROFILE
 ========================== */
