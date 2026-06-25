@@ -1,0 +1,188 @@
+/* ==========================
+   GENERAL SETTINGS
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: "Segoe UI", Arial, sans-serif;
+    background:#f7f8fa;
+    color:#222;
+    line-height:1.7;
+}
+
+a{
+    color:#0b5ed7;
+    text-decoration:none;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+
+/* ==========================
+   LAYOUT
+========================== */
+
+.container{
+    display:flex;
+    min-height:100vh;
+}
+
+.sidebar{
+    width:320px;
+    background:#ffffff;
+    border-right:1px solid #e5e5e5;
+    padding:30px 25px;
+    position:fixed;
+    height:100vh;
+    overflow-y:auto;
+}
+
+.main-content{
+    margin-left:320px;
+    padding:50px;
+    flex:1;
+}
+
+/* ==========================
+   PROFILE
+========================== */
+
+.profile{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.profile img{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #d9d9d9;
+}
+
+.profile h2{
+    margin-top:15px;
+    font-size:24px;
+}
+
+.profile p{
+    color:#666;
+    font-size:14px;
+}
+
+/* ==========================
+   NAVIGATION
+========================== */
+
+.nav-links{
+    margin:25px 0;
+}
+
+.nav-links a{
+    display:block;
+    padding:12px 15px;
+    margin-bottom:8px;
+    background:#f3f5f7;
+    border-radius:6px;
+    color:#222;
+    font-weight:500;
+}
+
+.nav-links a:hover{
+    background:#e9edf3;
+}
+
+/* ==========================
+   CONTACT
+========================== */
+
+.contact-section{
+    margin-top:25px;
+}
+
+.contact-section h3{
+    margin-bottom:10px;
+    color:#1c1c1c;
+}
+
+.contact-section p{
+    font-size:14px;
+    color:#555;
+}
+
+.contact-links{
+    margin-top:15px;
+}
+
+.contact-links a{
+    display:block;
+    margin-bottom:8px;
+}
+
+/* ==========================
+   CONTENT
+========================== */
+
+.page-title{
+    font-size:36px;
+    margin-bottom:25px;
+    color:#1b365d;
+}
+
+.section{
+    margin-bottom:40px;
+}
+
+.section h2{
+    margin-bottom:15px;
+    color:#1b365d;
+}
+
+.publication-item{
+    margin-bottom:20px;
+    padding-bottom:15px;
+    border-bottom:1px solid #ddd;
+}
+
+.course-list li{
+    margin-bottom:10px;
+}
+
+/* ==========================
+   MOBILE VIEW
+========================== */
+
+@media (max-width:900px){
+
+    .container{
+        flex-direction:column;
+    }
+
+    .sidebar{
+        position:relative;
+        width:100%;
+        height:auto;
+        border-right:none;
+        border-bottom:1px solid #ddd;
+    }
+
+    .main-content{
+        margin-left:0;
+        padding:25px;
+    }
+
+    .profile img{
+        width:140px;
+        height:140px;
+    }
+
+    .page-title{
+        font-size:28px;
+    }
+}
