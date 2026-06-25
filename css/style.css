@@ -76,6 +76,7 @@ a:hover{
 @media (max-width:900px){
 
     .container{
+        position:relative;
         display:block;
     }
 
