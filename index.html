@@ -10,9 +10,16 @@
 
 <body>
 
+<button class="menu-toggle" onclick="toggleSidebar()">
+    ☰
+    <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+</button>
+
 <div class="container">
 
     <aside class="sidebar">
+
+        <button class="close-btn" onclick="closeSidebar()">✕</button>
 
         <div class="profile">
             <img src="images/profile.jpg" alt="Profile Picture">
@@ -99,6 +106,32 @@
     </main>
 
 </div>
+
+<script>
+
+function toggleSidebar() {
+
+    document
+        .querySelector('.sidebar')
+        .classList.toggle('active');
+
+    document
+        .getElementById('overlay')
+        .classList.toggle('active');
+}
+
+function closeSidebar() {
+
+    document
+        .querySelector('.sidebar')
+        .classList.remove('active');
+
+    document
+        .getElementById('overlay')
+        .classList.remove('active');
+}
+
+</script>
 
 </body>
 </html>
