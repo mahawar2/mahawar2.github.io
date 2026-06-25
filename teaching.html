@@ -16,6 +16,8 @@
 
     <aside class="sidebar">
 
+        <button class="close-btn" onclick="closeSidebar()">✕</button>
+
         <div class="profile">
             <img src="images/profile.jpg" alt="Profile Picture">
             <h2>Dr. Jayant Mahawar</h2>
@@ -99,19 +101,12 @@ function toggleSidebar(){
         .querySelector('.sidebar')
         .classList.toggle('active');
 
-    document
-        .getElementById('overlay')
-        .classList.toggle('active');
 }
 
 function closeSidebar(){
 
     document
         .querySelector('.sidebar')
-        .classList.remove('active');
-
-    document
-        .getElementById('overlay')
         .classList.remove('active');
 }
 
