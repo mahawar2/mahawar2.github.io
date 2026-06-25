@@ -10,9 +10,17 @@
 
 <body>
 
+<button class="menu-toggle" onclick="toggleSidebar()">
+    ☰
+</button>
+
+<div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
 <div class="container">
 
     <aside class="sidebar">
+
+        <button class="close-btn" onclick="closeSidebar()">✕</button>
 
         <div class="profile">
             <img src="images/profile.jpg" alt="Profile Picture">
