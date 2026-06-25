@@ -39,7 +39,7 @@ a:hover{
 
 .menu-toggle{
     display:none;
-    position:fixed;
+    position:relative;
     top:15px;
     left:15px;
     z-index:2000;
@@ -84,7 +84,7 @@ a:hover{
         display:none;
         width:100%;
         height:auto;
-        position:absolute;
+        position:relative;
         border-right:none;
         border-bottom:1px solid #ddd;
         margin:0;
@@ -233,6 +233,7 @@ a:hover{
     }
 
     .sidebar{
+        position:relative;
         width:100%;
         height:auto;
         border-right:none;
