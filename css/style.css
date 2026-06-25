@@ -33,30 +33,9 @@ a:hover{
     min-height:100vh;
 }
 
-/* ==========================
-   HAMBURGER BUTTON
-========================== */
-
-.menu-toggle{
-    display:none;
-    position:relative;
-    top:15px;
-    left:15px;
-    z-index:2000;
-
-    background:#1b365d;
-    color:white;
-    border:none;
-    border-radius:6px;
-
-    padding:10px 14px;
-    font-size:22px;
-    cursor:pointer;
-}
-
 .sidebar{
     width:320px;
-    background:white;
+    background:#ffffff;
     border-right:1px solid #e5e5e5;
     padding:30px 25px;
     position:fixed;
@@ -67,55 +46,13 @@ a:hover{
 .main-content{
     margin-left:320px;
     padding:50px;
+    flex:1;
 }
 
-/* ==========================
-   MOBILE DRAWER MENU
-========================== */
-
-@media (max-width:900px){
-
-    .container{
-        display:block;
-    }
-
-    /* Hidden by default */
-    .sidebar{
-        display:none;
-        width:100%;
-        height:auto;
-        position:relative;
-        border-right:none;
-        border-bottom:1px solid #ddd;
-        margin:0;
-        top:0;
-        left:0;
-    }
-
-    /* Shown when button clicked */
-    .sidebar.active{
-        display:block;
-    }
-
-    .main-content{
-        margin-left:0;
-        width:100%;
-        padding:20px;
-        position:relative;
-    }
-
-    .menu-toggle{
-        display:block;
-        margin:15px;
-        padding:10px 15px;
-        border:none;
-        border-radius:5px;
-        cursor:pointer;
-        font-size:20px;
-        background:#1b365d;
-        color:white;
-    }
+.close-btn{
+    display:none;
 }
+
 /* ==========================
    PROFILE
 ========================== */
@@ -229,19 +166,28 @@ a:hover{
 
     .container{
         flex-direction:column;
+        display:block;
     }
 
     .sidebar{
+        display:none;
         position:relative;
         width:100%;
         height:auto;
         border-right:none;
         border-bottom:1px solid #ddd;
+        margin:0;
+    }
+
+    /* Shown when button clicked */
+    .sidebar.active{
+        display:block;
     }
 
     .main-content{
         margin-left:0;
-        padding:125px 20px 20px 20px;
+        width:100%;
+        padding:20px;
     }
 
     .profile img{
@@ -251,5 +197,29 @@ a:hover{
 
     .page-title{
         font-size:28px;
+    }
+
+    .close-btn{
+        display:block;
+        float:right;
+
+        border:none;
+        background:none;
+
+        font-size:24px;
+        cursor:pointer;
+        margin-bottom:15px;
+    }
+    
+    .menu-toggle{
+        display:block;
+        margin:15px;
+        padding:10px 15px;
+        border:none;
+        border-radius:5px;
+        cursor:pointer;
+        font-size:20px;
+        background:#1b365d;
+        color:white;
     }
 }
